@@ -1,6 +1,6 @@
 Uma fake API para uma aplicação de scraps
 
-Base URL: 
+Base URL: https://scrap-fake-api.onrender.com
 
 ## ROTAS
 
