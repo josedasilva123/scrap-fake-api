@@ -19,7 +19,7 @@ Padrão de resposta:
 ]
 ```
 
-### Scraps /news POST
+### Scraps /scraps POST
 
 Padrão de corpo
 
