@@ -4,6 +4,8 @@ Base URL: https://scrap-fake-api.onrender.com
 
 ## ROTAS
 
+## Scraps
+
 ### Scraps /scraps GET
 
 Padrão de resposta:
@@ -19,7 +21,13 @@ Padrão de resposta:
 ]
 ```
 
-### Scraps /scraps POST
+### Scraps /scraps POST (Requer Autorização)
+
+```json
+{
+   "Authorization": "Bearer ${token}"
+}
+```
 
 Padrão de corpo
 
@@ -40,4 +48,71 @@ Padrão de resposta
     "email": "josedasilva@email.com",
     "content": "Belezinha meu amigão?",
 } 
+```
+
+### Scraps /scraps/:scrapId DELETE (Requer Autorização)
+
+```json
+{
+   "Authorization": "Bearer ${token}"
+}
+```
+
+Não tem um corpo de resposta, nem precisa de um cor´
+
+## Usuário
+
+## Registrar Usuário /users POST
+
+Padrão de corpo
+
+```json
+{
+    "name": "José da Silva",
+    "email": "josedasilva@email.com",
+    "password": "123456",
+} 
+```
+
+## Login de Usuário /login POST
+
+Padrão de corpo
+
+```json
+{
+    "email": "josedasilva@email.com",
+    "password": "123456",
+} 
+```
+
+Padrão de Resposta
+
+```json
+{
+	"accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5kb2VAZW1haWwuY29tIiwiaWF0IjoxNjgxMjI2MzU1LCJleHAiOjE2ODEyMjk5NTUsInN1YiI6IjIifQ.HoHzAjg6luV9k6v8zHyewSTHsUnAKDBIbFiIS0r_joM",
+	"user": {
+        "name": "José da Silva",
+		"email": "josedasilva@email.com",		
+		"id": 1
+	}
+}
+```
+### Usuário (Autologin) /users/:userId GET (Precisa de autorização)
+
+Headers
+
+```json
+{
+   'Authorization': 'Bearer token'
+}
+```
+
+Padrão de resposta
+
+```json
+{
+    "name": "José da Silva",
+	"email": "josedasilva@email.com",		
+	"id": 1
+}
 ```
