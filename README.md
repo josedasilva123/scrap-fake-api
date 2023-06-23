@@ -97,7 +97,7 @@ Padrão de Resposta
 	}
 }
 ```
-### Usuário (Autologin) /users/:userId GET (Precisa de autorização)
+### Usuário (Autologin) /users/:userId GET (Requer Autorização)
 
 Headers
 
