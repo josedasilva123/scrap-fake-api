@@ -112,7 +112,7 @@ Padrão de resposta
 ```json
 {
     "name": "José da Silva",
-	"email": "josedasilva@email.com",		
-	"id": 1
+    "email": "josedasilva@email.com",		
+    "id": 1
 }
 ```
