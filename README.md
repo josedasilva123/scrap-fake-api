@@ -26,7 +26,7 @@ Padrão de resposta:
 
 ```json
 {
-   "Authorization": "Bearer ${token}"
+   "Authorization": "Bearer token"
 }
 ```
 
@@ -57,7 +57,7 @@ Padrão de resposta
 
 ```json
 {
-   "Authorization": "Bearer ${token}"
+   "Authorization": "Bearer token"
 }
 ```
 
@@ -87,7 +87,7 @@ Padrão de resposta
 
 ```json
 {
-   "Authorization": "Bearer ${token}"
+   "Authorization": "Bearer token"
 }
 ```
 
