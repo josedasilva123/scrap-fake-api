@@ -12,12 +12,13 @@ Padrão de resposta:
 
 ```json
 [
-    {
-        "id": 1,
-        "author": "José da Silva",
-        "email": "josedasilva@email.com",
-        "content": "Belezinha meu amigão?",
-    } 
+   {
+      "id": 1,
+      "author": "José da Silva",
+      "email": "josedasilva@email.com",
+      "content": "Belezinha meu amigão?",
+      "userId": 1
+   }
 ]
 ```
 
@@ -33,21 +34,23 @@ Padrão de corpo
 
 ```json
 {
-    "author": "José da Silva",
-    "email": "josedasilva@email.com",
-    "content": "Belezinha meu amigão?",
-} 
+   "author": "José da Silva",
+   "email": "josedasilva@email.com",
+   "content": "Belezinha meu amigão?",
+   "userId": 1
+}
 ```
 
 Padrão de resposta
 
 ```json
 {
-    "id": 1,
-    "author": "José da Silva",
-    "email": "josedasilva@email.com",
-    "content": "Belezinha meu amigão?",
-} 
+   "id": 1,
+   "author": "José da Silva",
+   "email": "josedasilva@email.com",
+   "content": "Belezinha meu amigão?",
+   "userId": 1
+}
 ```
 
 ### Scraps /scraps/:scrapId DELETE (Requer Autorização)
@@ -68,10 +71,10 @@ Padrão de corpo
 
 ```json
 {
-    "name": "José da Silva",
-    "email": "josedasilva@email.com",
-    "password": "123456",
-} 
+   "name": "José da Silva",
+   "email": "josedasilva@email.com",
+   "password": "123456"
+}
 ```
 
 ## Login de Usuário /login POST
@@ -80,30 +83,31 @@ Padrão de corpo
 
 ```json
 {
-    "email": "josedasilva@email.com",
-    "password": "123456",
-} 
+   "email": "josedasilva@email.com",
+   "password": "123456"
+}
 ```
 
 Padrão de Resposta
 
 ```json
 {
-	"accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5kb2VAZW1haWwuY29tIiwiaWF0IjoxNjgxMjI2MzU1LCJleHAiOjE2ODEyMjk5NTUsInN1YiI6IjIifQ.HoHzAjg6luV9k6v8zHyewSTHsUnAKDBIbFiIS0r_joM",
-	"user": {
-        	"name": "José da Silva",
-		"email": "josedasilva@email.com",		
-		"id": 1
-	}
+   "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG5kb2VAZW1haWwuY29tIiwiaWF0IjoxNjgxMjI2MzU1LCJleHAiOjE2ODEyMjk5NTUsInN1YiI6IjIifQ.HoHzAjg6luV9k6v8zHyewSTHsUnAKDBIbFiIS0r_joM",
+   "user": {
+      "name": "José da Silva",
+      "email": "josedasilva@email.com",
+      "id": 1
+   }
 }
 ```
+
 ### Usuário (Autologin) /users/:userId GET (Requer Autorização)
 
 Headers
 
 ```json
 {
-   'Authorization': 'Bearer token'
+   "Authorization": "Bearer token"
 }
 ```
 
@@ -111,8 +115,8 @@ Padrão de resposta
 
 ```json
 {
-    "name": "José da Silva",
-    "email": "josedasilva@email.com",		
-    "id": 1
+   "name": "José da Silva",
+   "email": "josedasilva@email.com",
+   "id": 1
 }
 ```
