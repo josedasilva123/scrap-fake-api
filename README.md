@@ -53,6 +53,36 @@ Padrão de resposta
 }
 ```
 
+### Scraps /scraps/:scrapId PATCH (Requer Autorização)
+
+```json
+{
+   "Authorization": "Bearer ${token}"
+}
+```
+
+Padrão de corpo
+
+```json
+{
+   "author": "José da Silva",
+   "email": "josedasilva@email.com",
+   "content": "Belezinha meu amigão?",
+}
+```
+
+Padrão de resposta
+
+```json
+{
+   "id": 1,
+   "author": "José da Silva",
+   "email": "josedasilva@email.com",
+   "content": "Belezinha meu amigão?",
+   "userId": 1
+}
+```
+
 ### Scraps /scraps/:scrapId DELETE (Requer Autorização)
 
 ```json
